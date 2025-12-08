@@ -1,0 +1,43 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  font-family: var(--font-geist-sans);
+}
+
+.kontaktSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+}
+
+.textCenter {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  color: #4b5563;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

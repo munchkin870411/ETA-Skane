@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { Footer } from "@/components/footer";
-import { ContactSection } from "@/components/contact-section";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans">
+    <div className={styles.page}>
       <Header />
 
       <HeroSection
@@ -17,16 +17,16 @@ export default function Home() {
       />
 
       {/* Om Oss Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section className={styles.omOssSection}>
+        <div className={styles.container}>
           
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          <h3 className={styles.omOssTitle}>
             Vår unika historia och passion
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className={styles.omOssGrid}>
             {/* Bild */}
-            <div className="relative rounded-lg h-80 overflow-hidden">
+            <div className={styles.imageWrapper}>
               <Image
                 src="/pexels-photo-889831-889831-1024x683.jpg"
                 alt="Train interior"
@@ -36,11 +36,11 @@ export default function Home() {
             </div>
 
             {/* Text content */}
-            <div className="space-y-6">
-              <h4 className="text-2xl font-bold text-gray-900">
+            <div className={styles.textContent}>
+              <h4>
                 Vårt engagemang för hög kvalitet
               </h4>
-              <p className="text-gray-600 leading-relaxed">
+              <p>
                 Elite Train Associates Skåne AB är en ledande aktör inom tågbranschen, baserad i Skåne, Sverige. Vår strävan efter säkerhet, kvalitet och innovation driver oss att leverera exceptionella tjänster inom tågunderhåll, service och operatörstjänster.
               </p>
             </div>
@@ -50,18 +50,18 @@ export default function Home() {
 
       {/* Image Section with Parallax */}
       <section 
-        className="relative h-96 bg-cover bg-center bg-fixed"
+        className={styles.parallaxSection}
         style={{ backgroundImage: 'url(/pro-Eg9rHyUy-1.jpeg)' }}
       >
-        <div className="absolute inset-0 bg-linear-to-br from-slate-900/80 via-blue-950/60 to-slate-950/80" />
+        <div className={styles.parallaxOverlay} />
       </section>
 
       {/* Tjänster Section */}
-      <section className="py-20 px-6 bg-slate-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center justify-between mb-12">
+      <section className={styles.tjansterSection}>
+        <div className={styles.container}>
+          <div className={styles.tjansterHeader}>
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h3 className={styles.tjansterTitle}>
                 Våra huvudtjänster
               </h3>
             </div>
@@ -73,15 +73,15 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className={styles.tjansterGrid}>
             {/* Tjänst 1 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="mb-6">
+            <div className={styles.tjanstCard}>
+              <div className={styles.spacer}>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-6">
+              <h4>
                 Tågunderhåll
               </h4>
-              <div className="relative h-48 rounded-lg overflow-hidden">
+              <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-q1n3xa89-768x1024.jpeg"
                   alt="Tågunderhåll"
@@ -92,13 +92,13 @@ export default function Home() {
             </div>
 
             {/* Tjänst 2 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="mb-6">
+            <div className={styles.tjanstCard}>
+              <div className={styles.spacer}>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-6">
+              <h4>
                 Akut felsökning och reparation
               </h4>
-              <div className="relative h-48 rounded-lg overflow-hidden">
+              <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-tA4FKtiR-1024x768.jpeg"
                   alt="Akut felsökning och reparation"
@@ -109,13 +109,13 @@ export default function Home() {
             </div>
 
             {/* Tjänst 3 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="mb-6">
+            <div className={styles.tjanstCard}>
+              <div className={styles.spacer}>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-6">
+              <h4>
                 Teknisk rådgivning
               </h4>
-              <div className="relative h-48 rounded-lg overflow-hidden">
+              <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-RTaibBoU_square-1024x1024.jpg"
                   alt="Teknisk rådgivning"
@@ -129,48 +129,48 @@ export default function Home() {
       </section>
 
       {/* Unikt värdeerbjudande Section */}
-      <section className="py-20 px-6 bg-slate-900">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className={styles.vardeSection}>
+        <div className={styles.container}>
+          <div className={styles.vardeGrid}>
             {/* Text content */}
-            <div className="text-white space-y-8">
-              <h3 className="text-3xl md:text-4xl font-bold">
+            <div className={styles.vardeTextContent}>
+              <h3>
                 Unikt värdeerbjudande
               </h3>
-              <p className="text-lg text-white/90">
+              <p>
                 Vi levererar högsta kvalitet med passion och precision
               </p>
 
-              <div className="space-y-6">
+              <div className={styles.featureList}>
                 {/* Feature 1 */}
-                <div className="flex gap-4">
-                  <div className="shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                      <svg className="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className={styles.feature}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.icon}>
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Kundfokus</h4>
-                    <p className="text-white/80">
+                  <div className={styles.featureContent}>
+                    <h4>Kundfokus</h4>
+                    <p>
                       Vi sätter våra kunders behov främst
                     </p>
                   </div>
                 </div>
 
                 {/* Feature 2 */}
-                <div className="flex gap-4">
-                  <div className="shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                      <svg className="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className={styles.feature}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.icon}>
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Specialister</h4>
-                    <p className="text-white/80">
+                  <div className={styles.featureContent}>
+                    <h4>Specialister</h4>
+                    <p>
                       Erfarna specialister för bästa resultat
                     </p>
                   </div>
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Image */}
-            <div className="relative h-96 rounded-lg overflow-hidden">
+            <div className={styles.vardeImageWrapper}>
               <Image
                 src="/pro-RTaibBoU_square-1024x1024.jpg"
                 alt="Train maintenance"
@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* Spacer Section */}
-      <section className="py-12 bg-slate-50"></section>
+      <section className={styles.spacerSection}></section>
 
       <Footer />
     </div>

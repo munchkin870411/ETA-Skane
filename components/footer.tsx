@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import styles from "./footer.module.css";
 
 export function Footer() {
   return (
-    <footer className="relative text-white py-16 px-6">
+    <footer className={styles.footer}>
       {/* Background image */}
       <Image
         src="/pro-T03GMZma-1.jpeg"
@@ -11,16 +12,16 @@ export function Footer() {
         fill
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-linear-to-br from-slate-900/90 via-blue-950/60 to-slate-950/90" />
+      <div className={styles.overlay} />
       
-      <div className="relative container mx-auto max-w-6xl z-10">
+      <div className={styles.container}>
         {/* Footer Grid */}
-        <div className="grid md:grid-cols-3 gap-20 mb-8">
+        <div className={styles.grid}>
 
           {/* Kontaktuppgifter */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Kontakt</h3>
-            <div className="space-y-2 text-sm text-white/80">
+            <h3 className={styles.columnTitle}>Kontakt</h3>
+            <div className={styles.contactInfo}>
               <p>Adress: Skåne, Sverige</p>
               <p>E-post: info@etaskane.se</p>
               <p>Telefon: +46 (0)XX XXX XX XX</p>
@@ -29,8 +30,8 @@ export function Footer() {
 
           {/* Öppettider */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Öppettider</h3>
-            <div className="space-y-2 text-sm text-white/80">
+            <h3 className={styles.columnTitle}>Öppettider</h3>
+            <div className={styles.contactInfo}>
               <p>Måndag - Fredag: 08:00 - 17:00</p>
               <p>Lördag - Söndag: Stängt</p>
             </div>
@@ -38,10 +39,10 @@ export function Footer() {
 
           {/* CTA Column */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4">
+            <h3 className={styles.ctaTitle}>
               Ta nästa steg tillsammans med oss!
             </h3>
-            <p className="text-white/80 text-sm mb-6 leading-relaxed">
+            <p className={styles.ctaText}>
               Kontakta oss idag för att uppleva skillnaden med Elite Train Associates Skåne AB.
             </p>
             <Button 
@@ -54,8 +55,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 text-center">
-          <p className="text-white/60 text-sm">
+        <div className={styles.divider}>
+          <p className={styles.copyright}>
             Upphovsrätt © 2025 Elite Train Associates Skåne AB
           </p>
         </div>

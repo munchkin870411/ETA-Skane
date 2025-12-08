@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import styles from "./page.module.css"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -52,7 +53,7 @@ export default function KontaktPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans">
+    <div className={styles.page}>
       <Header />
 
       <HeroSection
@@ -61,19 +62,19 @@ export default function KontaktPage() {
       />
 
       {/* Kontakt Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-2xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className={styles.kontaktSection}>
+        <div className={styles.container}>
+          <div className={styles.textCenter}>
+            <h2 className={styles.heading}>
               Skicka ett meddelande
             </h2>
-            <p className="text-gray-600">
+            <p className={styles.subheading}>
               Fyll i formuläret nedan så återkommer vi så snart som möjligt.
             </p>
           </div>
 
           <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
                   <FormField
                     control={form.control}
                     name="name"
@@ -150,7 +151,7 @@ export default function KontaktPage() {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    className="w-full bg-blue-900 hover:bg-blue-700 text-white"
                     size="lg"
                   >
                     Skicka meddelande

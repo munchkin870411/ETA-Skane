@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import styles from "./hero-section.module.css";
 
 interface HeroSectionProps {
   title: string;
@@ -17,7 +18,7 @@ export function HeroSection({
   showButton = false,
 }: HeroSectionProps) {
   return (
-    <section className="relative flex min-h-[500px] items-center justify-center px-6">
+    <section className={styles.section}>
       {/* Bakgrundsbild - alltid samma */}
       <Image
         src="/pexels-photo-1824169.jpeg"
@@ -26,13 +27,13 @@ export function HeroSection({
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-linear-to-br from-slate-900/80 via-blue-950/60 to-slate-950/80" />
+      <div className={styles.overlay} />
 
-      <div className="relative z-10 text-center max-w-4xl">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+      <div className={styles.content}>
+        <h2 className={styles.title}>
           {title}
         </h2>
-        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <p className={styles.subtitle}>
           {subtitle}
         </p>
         {showButton && (
