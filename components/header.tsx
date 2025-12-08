@@ -1,14 +1,20 @@
+"use client"
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import styles from "./header.module.css";
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -25,50 +31,74 @@ export function Header() {
             Elite Train Associates Skåne AB
           </h1>
         </div>
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/"
-                  className={styles.navLink}
-                >
-                  Hem
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/tjanster"
-                  className={styles.navLink}
-                >
-                  Tjänster
-                  </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/om"
-                  className={styles.navLink}
-                >
-                  Om ETA Skåne
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/kontakt"
-                  className={styles.navLink}
-                >
-                  Kontakt
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+
+        {/* Mobile Menu - Hamburger */}
+        <Sheet>
+          <SheetTrigger className={styles.hamburger}>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+          </SheetTrigger>
+          <SheetContent side="right" className={styles.sheetContent}>
+            <SheetHeader>
+              <SheetTitle className={styles.sheetTitle}>Meny</SheetTitle>
+            </SheetHeader>
+            <nav className={styles.mobileNav}>
+              <Link 
+                href="/" 
+                className={`${styles.mobileNavLink} ${pathname === "/" ? styles.active : ""}`}
+              >
+                Hem
+              </Link>
+              <Link 
+                href="/tjanster" 
+                className={`${styles.mobileNavLink} ${pathname === "/tjanster" ? styles.active : ""}`}
+              >
+                Tjänster
+              </Link>
+              <Link 
+                href="/om" 
+                className={`${styles.mobileNavLink} ${pathname === "/om" ? styles.active : ""}`}
+              >
+                Om ETA Skåne
+              </Link>
+              <Link 
+                href="/kontakt" 
+                className={`${styles.mobileNavLink} ${pathname === "/kontakt" ? styles.active : ""}`}
+              >
+                Kontakt
+              </Link>
+            </nav>
+          </SheetContent>
+        </Sheet>
+
+        {/* Desktop Navigation */}
+        <nav className={styles.desktopNav}>
+          <Link 
+            href="/" 
+            className={`${styles.navLink} ${pathname === "/" ? styles.active : ""}`}
+          >
+            Hem
+          </Link>
+          <Link 
+            href="/tjanster" 
+            className={`${styles.navLink} ${pathname === "/tjanster" ? styles.active : ""}`}
+          >
+            Tjänster
+          </Link>
+          <Link 
+            href="/om" 
+            className={`${styles.navLink} ${pathname === "/om" ? styles.active : ""}`}
+          >
+            Om ETA Skåne
+          </Link>
+          <Link 
+            href="/kontakt" 
+            className={`${styles.navLink} ${pathname === "/kontakt" ? styles.active : ""}`}
+          >
+            Kontakt
+          </Link>
+        </nav>
       </div>
     </header>
   );
