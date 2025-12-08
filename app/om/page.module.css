@@ -40,10 +40,6 @@
   gap: 2rem;
 }
 
-.textBlock {
-  /* No specific styles needed, inherits from parent */
-}
-
 .mainTitle {
   font-size: 1.875rem;
   font-weight: 700;

@@ -20,9 +20,20 @@ export default function Home() {
       <section className={styles.omOssSection}>
         <div className={styles.container}>
           
-          <h3 className={styles.omOssTitle}>
-            Vår unika historia och passion
-          </h3>
+          <div className={styles.tjansterHeader}>
+            <div>
+              <h3 className={styles.omOssTitle}>
+                Vår unika historia och passion
+              </h3>
+            </div>
+            <Button 
+              size="lg"
+              className="bg-blue-900 text-white hover:bg-blue-700 px-8 py-6 text-base font-semibold rounded-full"
+              asChild
+            >
+              <a href="/om">LÄS MER</a>
+            </Button>
+          </div>
 
           <div className={styles.omOssGrid}>
             {/* Bild */}
@@ -68,8 +79,9 @@ export default function Home() {
             <Button 
               size="lg"
               className="bg-blue-900 text-white hover:bg-blue-700 px-8 py-6 text-base font-semibold rounded-full"
+              asChild
             >
-              LÄS MER
+              <a href="/tjanster">LÄS MER</a>
             </Button>
           </div>
 

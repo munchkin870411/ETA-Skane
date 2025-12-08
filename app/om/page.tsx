@@ -10,7 +10,7 @@ export default function OmPage() {
       <Header />
 
       <HeroSection
-        title="Om ETA Skåne"
+        title="Om Elite Train Associates Skåne AB"
         subtitle="Lär känna vårt team och vår passion för tågbranschen"
       />
 
