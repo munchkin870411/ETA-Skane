@@ -1,14 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import type { HeroSectionProps } from "@/types/components";
 import styles from "./hero-section.module.css";
-
-interface HeroSectionProps {
-  title: string;
-  subtitle: string;
-  buttonText?: string;
-  buttonLink?: string;
-  showButton?: boolean;
-}
 
 export function HeroSection({
   title,

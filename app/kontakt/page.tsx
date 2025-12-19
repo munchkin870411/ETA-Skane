@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import * as z from "zod"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { Footer } from "@/components/footer"
@@ -17,25 +16,12 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { contactFormSchema, type ContactFormData } from "@/types/schemas"
 import styles from "./page.module.css"
 
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Namnet måste vara minst 2 tecken.",
-  }),
-  email: z.string().email({
-    message: "Ange en giltig e-postadress.",
-  }),
-  phone: z.string().optional(),
-  company: z.string().optional(),
-  message: z.string().min(10, {
-    message: "Meddelandet måste vara minst 10 tecken.",
-  }),
-})
-
 export default function KontaktPage() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -45,7 +31,7 @@ export default function KontaktPage() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: ContactFormData) {
     console.log(values)
     // Här kan du hantera formuläret (t.ex. skicka till en API)
     alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.")

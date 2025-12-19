@@ -1,0 +1,94 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  font-family: var(--font-geist-sans);
+}
+
+/* Login Form Section */
+.loginSection {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #f8fafc;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 28rem;
+}
+
+.formWrapper {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formFooter {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.link {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Tablet Breakpoint - 768px */
+@media (min-width: 768px) {
+  .formWrapper {
+    padding: 2.5rem;
+  }
+}
+
+/* Desktop Breakpoint - 1024px */
+@media (min-width: 1024px) {
+  .loginSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .container {
+    max-width: 32rem;
+  }
+
+  .formWrapper {
+    padding: 3rem;
+  }
+}
