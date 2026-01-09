@@ -87,7 +87,7 @@ export default function Home() {
 
           <div className={styles.tjansterGrid}>
             {/* Tjänst 1 */}
-            <div className={styles.tjanstCard}>
+            <a href="/tjanster" className={styles.tjanstCard}>
               <div className={styles.spacer}>
               </div>
               <h4>
@@ -101,10 +101,10 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-            </div>
+            </a>
 
             {/* Tjänst 2 */}
-            <div className={styles.tjanstCard}>
+            <a href="/tjanster" className={styles.tjanstCard}>
               <div className={styles.spacer}>
               </div>
               <h4>
@@ -118,10 +118,10 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-            </div>
+            </a>
 
             {/* Tjänst 3 */}
-            <div className={styles.tjanstCard}>
+            <a href="/tjanster" className={styles.tjanstCard}>
               <div className={styles.spacer}>
               </div>
               <h4>
@@ -135,7 +135,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
