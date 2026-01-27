@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
 import { Footer } from "@/components/footer";
 import styles from "./page.module.css";
 
@@ -9,12 +8,6 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <HeroSection
-        title="Erfaret konsultteam för högsta kvalitet"
-        subtitle="Vi erbjuder engagerad service med fokus även på de minsta detaljerna."
-        showButton={true}
-      />
 
       {/* Om Oss Section */}
       <section className={styles.omOssSection}>
@@ -59,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Image Section with Parallax */}
+    {/* Image Section with Parallax */}
       <section 
         className={styles.parallaxSection}
         style={{ backgroundImage: 'url(/pro-Eg9rHyUy-1.jpeg)' }}
@@ -136,69 +129,6 @@ export default function Home() {
                 />
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Unikt värdeerbjudande Section */}
-      <section className={styles.vardeSection}>
-        <div className={styles.container}>
-          <div className={styles.vardeGrid}>
-            {/* Text content */}
-            <div className={styles.vardeTextContent}>
-              <h3>
-                Unikt värdeerbjudande
-              </h3>
-              <p>
-                Vi levererar högsta kvalitet med passion och precision
-              </p>
-
-              <div className={styles.featureList}>
-                {/* Feature 1 */}
-                <div className={styles.feature}>
-                  <div className={styles.iconWrapper}>
-                    <div className={styles.icon}>
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className={styles.featureContent}>
-                    <h4>Kundfokus</h4>
-                    <p>
-                      Vi sätter våra kunders behov främst
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature 2 */}
-                <div className={styles.feature}>
-                  <div className={styles.iconWrapper}>
-                    <div className={styles.icon}>
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className={styles.featureContent}>
-                    <h4>Specialister</h4>
-                    <p>
-                      Erfarna specialister för bästa resultat
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className={styles.vardeImageWrapper}>
-              <Image
-                src="/pro-RTaibBoU_square-1024x1024.jpg"
-                alt="Train maintenance"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>

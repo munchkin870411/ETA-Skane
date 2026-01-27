@@ -17,6 +17,16 @@ export function Header() {
 
   return (
     <header className={styles.header}>
+      {/* Bakgrundsbild */}
+      <Image
+        src="/pexels-photo-1824169.jpeg"
+        alt="Header background"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className={styles.overlay} />
+      
       <div className={styles.container}>
         <div className={styles.logoSection}>
           <div className={styles.logoWrapper}>

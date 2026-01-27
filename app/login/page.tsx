@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import {
@@ -36,11 +35,6 @@ export default function LoginPage() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <HeroSection
-        title="Logga in"
-        subtitle="Välkommen tillbaka till Elite Train Associates Skåne AB"
-      />
 
       {/* Login Form Section */}
       <section className={styles.loginSection}>

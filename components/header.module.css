@@ -1,9 +1,17 @@
 /* Mobile First Approach */
 .header {
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 50;
   width: 100%;
+  min-height: 4rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(23, 37, 84, 0.6), rgba(2, 6, 23, 0.8));
+  z-index: 1;
 }
 
 .container {
@@ -15,7 +23,8 @@
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-top: 0.5rem;
+  position: relative;
+  z-index: 10;
 }
 
 .logoSection {
@@ -136,7 +145,6 @@
     height: 4.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    margin-top: 1rem;
   }
 
   .logoWrapper {
@@ -162,8 +170,7 @@
 /* Desktop Breakpoint - 1024px */
 @media (min-width: 1024px) {
   .container {
-    height: 5rem;
-    margin-top: 1.25rem;
+    height: 7rem;
   }
 
   .logoSection {

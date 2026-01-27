@@ -42,9 +42,6 @@ export function Footer() {
             <h3 className={styles.ctaTitle}>
               Ta nästa steg tillsammans med oss!
             </h3>
-            <p className={styles.ctaText}>
-              Kontakta oss idag för att uppleva skillnaden med Elite Train Associates Skåne AB.
-            </p>
             <Button 
               size="lg"
               className="bg-white text-blue-900 hover:bg-white/90 px-6 py-3 text-sm font-semibold rounded-full"

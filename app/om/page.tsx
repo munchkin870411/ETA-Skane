@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
 import { Footer } from "@/components/footer";
 import styles from "./page.module.css";
 
@@ -9,10 +8,6 @@ export default function OmPage() {
     <div className={styles.page}>
       <Header />
 
-      <HeroSection
-        title="Om Elite Train Associates Skåne AB"
-        subtitle="Lär känna vårt team och vår passion för tågbranschen"
-      />
 
       {/* Om företaget Section */}
       <section className={styles.omSection}>
@@ -52,7 +47,70 @@ export default function OmPage() {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
+            {/* Unikt värdeerbjudande Section */}
+      <section className={styles.vardeSection}>
+        <div className={styles.container}>
+          <div className={styles.vardeGrid}>
+            {/* Text content */}
+            <div className={styles.vardeTextContent}>
+              <h3>
+                Unikt värdeerbjudande
+              </h3>
+              <p>
+                Vi levererar högsta kvalitet med passion och precision
+              </p>
+
+              <div className={styles.featureList}>
+                {/* Feature 1 */}
+                <div className={styles.feature}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.icon}>
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className={styles.featureContent}>
+                    <h4>Kundfokus</h4>
+                    <p>
+                      Vi sätter våra kunders behov främst
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 2 */}
+                <div className={styles.feature}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.icon}>
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className={styles.featureContent}>
+                    <h4>Specialister</h4>
+                    <p>
+                      Erfarna specialister för bästa resultat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className={styles.vardeImageWrapper}>
+              <Image
+                src="/pro-RTaibBoU_square-1024x1024.jpg"
+                alt="Train maintenance"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Team Section */}
       <section className={styles.visionSection}>
         <div className={styles.container}>
           <div className={styles.visionGrid}>
@@ -69,23 +127,6 @@ export default function OmPage() {
             {/* Vår mission */}
             <div>
               <h3 className={styles.visionTitle}>
-                Vår mission
-              </h3>
-              <p className={styles.textContentNoMargin}>
-                Att säkerställa smidiga och säkra järnvägsresor genom förstklassigt underhåll och service av tåg. Vi arbetar kontinuerligt med att förbättra och utveckla våra metoder för att möta och överträffa våra kunders förväntningar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vårt Team & Hållbarhet Section */}
-      <section className={styles.teamSection}>
-        <div className={styles.container}>
-          <div className={styles.visionGrid}>
-            {/* Vårt Team */}
-            <div>
-              <h3 className={styles.visionTitle}>
                 Vårt Team
               </h3>
               <p className={styles.textContentNoMargin}>
@@ -93,97 +134,6 @@ export default function OmPage() {
               </p>
             </div>
 
-            {/* Hållbarhet */}
-            <div>
-              <h3 className={styles.visionTitle}>
-                Hållbarhet
-              </h3>
-              <p className={styles.textContentNoMargin}>
-                På Elite Train Associates Skåne AB är vi engagerade i att bidra till en hållbar framtid. Vi arbetar aktivt med att implementera miljövänliga teknologier och processer för att minska vår miljöpåverkan och stödja hållbara transportlösningar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Kärnvärden Section */}
-      <section className={styles.coreValuesSection}>
-        <div className={styles.container}>
-          <div className={styles.textCenter}>
-            <h2 className={styles.coreTitle}>
-              Kärnvärden
-            </h2>
-            <p className={styles.coreSubtitle}>
-              Våra grundläggande principer styr allt vi gör.
-            </p>
-          </div>
-
-          <div className={styles.coreGrid}>
-            {/* Left column - Värde 1 & 2 */}
-            <div className={styles.valueColumn}>
-              {/* Värde 1 */}
-              <div className={styles.valueItem}>
-                <div className={styles.valueContent}>
-                  <div>
-                    <h4 className={styles.valueTitle}>Engagemang</h4>
-                    <p className={styles.valueText}>
-                      Dedikerade till att överträffa förväntningar och leverera kvalitet.
-                    </p>
-                    <div className={styles.valueDivider}></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Värde 2 */}
-              <div className={styles.valueItem}>
-                <div className={styles.valueContent}>
-                  <div>
-                    <h4 className={styles.valueTitle}>Integritet</h4>
-                    <p className={styles.valueText}>
-                      Ärlighet och trovärdighet i allt vi gör är av yttersta vikt.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Center image */}
-            <div className={styles.centerImage}>
-              <Image
-                src="/pexels-photo-1658967.jpeg"
-                alt="Beautiful landscape with train"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Right column - Värde 3 & 4 */}
-            <div className={styles.valueColumn}>
-              {/* Värde 3 */}
-              <div className={styles.valueItem}>
-                <div className={styles.valueContent}>
-                  <div>
-                    <h4 className={styles.valueTitle}>Innovation</h4>
-                    <p className={styles.valueText}>
-                      Ständig strävan efter att tänka nytt och skapa värde för klienter.
-                    </p>
-                    <div className={styles.valueDivider}></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Värde 4 */}
-              <div className={styles.valueItem}>
-                <div className={styles.valueContent}>
-                  <div>
-                    <h4 className={styles.valueTitle}>Samarbete</h4>
-                    <p className={styles.valueText}>
-                      Vi uppskattar samarbetet och tror att tillsammans når vi längre.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

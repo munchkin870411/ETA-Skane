@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
 import { Footer } from "@/components/footer";
 import styles from "./page.module.css";
 
@@ -8,11 +7,6 @@ export default function TjansterPage() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <HeroSection
-        title="Våra Tjänster"
-        subtitle="Expertis och lösningar för alla dina tågunderhållsbehov"
-      />
 
       {/* Tjänster Section */}
       <section className={styles.tjansterSection}>

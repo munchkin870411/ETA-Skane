@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import {
@@ -42,10 +41,6 @@ export default function KontaktPage() {
     <div className={styles.page}>
       <Header />
 
-      <HeroSection
-        title="Ta kontakt med oss idag!"
-        subtitle="Har du frågor eller vill diskutera ett projekt? Tveka inte att kontakta oss så återkommer vi snabbt vi kan."
-      />
 
       {/* Kontakt Section */}
       <section className={styles.kontaktSection}>
