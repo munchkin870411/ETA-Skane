@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export function Header() {
         priority
       />
       <div className={styles.overlay} />
-      
+
       <div className={styles.container}>
         <div className={styles.logoSection}>
           <div className={styles.logoWrapper}>
@@ -37,9 +37,7 @@ export function Header() {
               className="object-cover"
             />
           </div>
-          <h1 className={styles.logoTitle}>
-            Elite Train Associates Skåne AB
-          </h1>
+          <h1 className={styles.logoTitle}>Elite Train Associates Skåne AB</h1>
         </div>
 
         {/* Mobile Menu - Hamburger */}
@@ -54,26 +52,26 @@ export function Header() {
               <SheetTitle className={styles.sheetTitle}>Meny</SheetTitle>
             </SheetHeader>
             <nav className={styles.mobileNav}>
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className={`${styles.mobileNavLink} ${pathname === "/" ? styles.active : ""}`}
               >
                 Hem
               </Link>
-              <Link 
-                href="/tjanster" 
+              <Link
+                href="/tjanster"
                 className={`${styles.mobileNavLink} ${pathname === "/tjanster" ? styles.active : ""}`}
               >
                 Tjänster
               </Link>
-              <Link 
-                href="/om" 
+              <Link
+                href="/om"
                 className={`${styles.mobileNavLink} ${pathname === "/om" ? styles.active : ""}`}
               >
                 Om ETA Skåne
               </Link>
-              <Link 
-                href="/kontakt" 
+              <Link
+                href="/kontakt"
                 className={`${styles.mobileNavLink} ${pathname === "/kontakt" ? styles.active : ""}`}
               >
                 Kontakt
@@ -84,26 +82,26 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className={`${styles.navLink} ${pathname === "/" ? styles.active : ""}`}
           >
             Hem
           </Link>
-          <Link 
-            href="/tjanster" 
+          <Link
+            href="/tjanster"
             className={`${styles.navLink} ${pathname === "/tjanster" ? styles.active : ""}`}
           >
             Tjänster
           </Link>
-          <Link 
-            href="/om" 
+          <Link
+            href="/om"
             className={`${styles.navLink} ${pathname === "/om" ? styles.active : ""}`}
           >
             Om ETA Skåne
           </Link>
-          <Link 
-            href="/kontakt" 
+          <Link
+            href="/kontakt"
             className={`${styles.navLink} ${pathname === "/kontakt" ? styles.active : ""}`}
           >
             Kontakt

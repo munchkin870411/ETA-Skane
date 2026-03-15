@@ -9,7 +9,12 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.9), rgba(23, 37, 84, 0.6), rgba(2, 6, 23, 0.9));
+  background: linear-gradient(
+    to bottom right,
+    rgba(15, 23, 42, 0.9),
+    rgba(23, 37, 84, 0.6),
+    rgba(2, 6, 23, 0.9)
+  );
 }
 
 .container {

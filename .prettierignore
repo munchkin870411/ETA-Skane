@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+
+# Next.js build output
+.next
+out
+build
+
+# Generated files
+next-env.d.ts
+*.tsbuildinfo
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+.vercel
+.DS_Store

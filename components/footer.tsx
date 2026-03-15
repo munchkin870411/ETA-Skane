@@ -13,11 +13,10 @@ export function Footer() {
         className="object-cover"
       />
       <div className={styles.overlay} />
-      
+
       <div className={styles.container}>
         {/* Footer Grid */}
         <div className={styles.grid}>
-
           {/* Kontaktuppgifter */}
           <div>
             <h3 className={styles.columnTitle}>Kontakt</h3>
@@ -42,9 +41,9 @@ export function Footer() {
             <h3 className={styles.ctaTitle}>
               Ta nästa steg tillsammans med oss!
             </h3>
-            <Button 
+            <Button
               size="lg"
-              className="bg-white text-blue-900 hover:bg-white/90 px-6 py-3 text-sm font-semibold rounded-full"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-900 hover:bg-white/90"
               asChild
             >
               <a href="/kontakt">KONTAKTA OSS</a>
