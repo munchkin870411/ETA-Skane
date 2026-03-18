@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eta Skåne
+
+## Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com) + [Radix UI](https://www.radix-ui.com)
+- **Forms:** [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev)
+- **Icons:** [Lucide React](https://lucide.dev)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20.x or higher
+- npm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run typecheck` - Run TypeScript type checking
+- `npm run format` - Format all files with Prettier
+- `npm run format:check` - Check code formatting without modifying files
 
-## Learn More
+## Development Workflow
 
-To learn more about Next.js, take a look at the following resources:
+### Pre-commit Hooks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project uses Husky and lint-staged to automatically run checks before each commit:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **ESLint** - Auto-fixes linting issues on staged files
+- **Prettier** - Auto-formats staged files
 
-## Deploy on Vercel
+This ensures all committed code meets quality standards. If checks fail, the commit will be blocked.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Creating a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a feature branch from `master`
+2. Make your changes (pre-commit hooks run automatically on commit)
+3. Push your branch and open a PR to `master`
+4. CI checks will run automatically (lint, typecheck, build)
+5. Request review and wait for approval
+6. Squash and merge when approved
+
+### CI/CD
+
+GitHub Actions runs automatically on:
+
+- Pull requests to `master`
+- Pushes to `master`
+
+Checks include:
+
+- ESLint
+- Prettier formatting check
+- TypeScript type checking
+- Production build verification
+
+## Project Structure
+
+```
+app/              # Next.js app router pages
+components/       # React components
+  ui/            # Reusable UI components (shadcn/ui)
+lib/             # Utility functions
+types/           # TypeScript type definitions
+public/          # Static assets
+```
