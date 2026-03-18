@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,10 +12,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { loginFormSchema, type LoginFormData } from "@/types/schemas"
-import styles from "./page.module.css"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { loginFormSchema, type LoginFormData } from "@/types/schemas";
+import styles from "./page.module.css";
 
 export default function LoginPage() {
   const form = useForm<LoginFormData>({
@@ -24,12 +24,12 @@ export default function LoginPage() {
       email: "",
       password: "",
     },
-  })
+  });
 
   function onSubmit(values: LoginFormData) {
-    console.log(values)
+    console.log(values);
     // Handle login logic here
-    alert("Inloggning genomförd!")
+    alert("Inloggning genomförd!");
   }
 
   return (
@@ -48,7 +48,10 @@ export default function LoginPage() {
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className={styles.form}
+              >
                 <FormField
                   control={form.control}
                   name="email"
@@ -56,13 +59,17 @@ export default function LoginPage() {
                     <FormItem>
                       <FormLabel>E-post</FormLabel>
                       <FormControl>
-                        <Input placeholder="din@epost.se" type="email" {...field} />
+                        <Input
+                          placeholder="din@epost.se"
+                          type="email"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="password"
@@ -70,16 +77,20 @@ export default function LoginPage() {
                     <FormItem>
                       <FormLabel>Lösenord</FormLabel>
                       <FormControl>
-                        <Input placeholder="••••••••" type="password" {...field} />
+                        <Input
+                          placeholder="••••••••"
+                          type="password"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white hover:bg-blue-700"
                   size="lg"
                 >
                   Logga in
@@ -89,7 +100,10 @@ export default function LoginPage() {
 
             <div className={styles.formFooter}>
               <p>
-                Glömt lösenord? <a href="/reset-password" className={styles.link}>Återställ här</a>
+                Glömt lösenord?{" "}
+                <a href="/reset-password" className={styles.link}>
+                  Återställ här
+                </a>
               </p>
             </div>
           </div>
@@ -98,5 +112,5 @@ export default function LoginPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

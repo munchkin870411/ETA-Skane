@@ -2,6 +2,13 @@ import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Våra tjänster",
+  description:
+    "Upptäck våra huvudsakliga tjänster - Teknisk rådgivning, Projektledning och Specialistkonsultation. Vi erbjuder professionella tjänster för din framgång.",
+};
 
 export default function TjansterPage() {
   return (
@@ -12,9 +19,7 @@ export default function TjansterPage() {
       <section className={styles.tjansterSection}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <h2 className={styles.title}>
-              Våra huvudtjänster
-            </h2>
+            <h2 className={styles.title}>Våra huvudtjänster</h2>
             <p className={styles.subtitle}>
               Våra huvudsakliga tjänster för din framgång
             </p>
@@ -31,9 +36,7 @@ export default function TjansterPage() {
               />
               <div className={styles.overlay} />
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
-                  Teknisk Rådgivning
-                </h3>
+                <h3 className={styles.cardTitle}>Teknisk Rådgivning</h3>
                 <p className={styles.cardDescription}>
                   Rådgivning om bästa praxis för underhåll och felsökning.
                 </p>
@@ -50,11 +53,11 @@ export default function TjansterPage() {
               />
               <div className={styles.overlay} />
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
-                  Tågunderhåll
-                </h3>
+                <h3 className={styles.cardTitle}>Tågunderhåll</h3>
                 <p className={styles.cardDescription}>
-                  Regelbundet och omfattande underhåll för att säkerställa att alla tåg är i toppskick och redo att möta dagens transportutmaningar.
+                  Regelbundet och omfattande underhåll för att säkerställa att
+                  alla tåg är i toppskick och redo att möta dagens
+                  transportutmaningar.
                 </p>
               </div>
             </div>
@@ -69,11 +72,11 @@ export default function TjansterPage() {
               />
               <div className={styles.overlay} />
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
-                  Förebyggande Underhåll
-                </h3>
+                <h3 className={styles.cardTitle}>Förebyggande Underhåll</h3>
                 <p className={styles.cardDescription}>
-                  Planering och genomförande av underhåll för att förlänga komponenternas livslängd. Uppdateringar och förbättringar för optimal prestanda.
+                  Planering och genomförande av underhåll för att förlänga
+                  komponenternas livslängd. Uppdateringar och förbättringar för
+                  optimal prestanda.
                 </p>
               </div>
             </div>
@@ -88,11 +91,10 @@ export default function TjansterPage() {
               />
               <div className={styles.overlay} />
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
-                  Avancerad Diagnostik
-                </h3>
+                <h3 className={styles.cardTitle}>Avancerad Diagnostik</h3>
                 <p className={styles.cardDescription}>
-                  Användning av avancerad diagnostisk utrustning för att identifiera fel exakt.
+                  Användning av avancerad diagnostisk utrustning för att
+                  identifiera fel exakt.
                 </p>
               </div>
             </div>
@@ -107,11 +109,10 @@ export default function TjansterPage() {
               />
               <div className={styles.overlay} />
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>
-                  Regelbundna Inspektioner
-                </h3>
+                <h3 className={styles.cardTitle}>Regelbundna Inspektioner</h3>
                 <p className={styles.cardDescription}>
-                  Kompletta lösningar för tågoperatörer, inklusive bemanning, utbildning och driftstöd.
+                  Kompletta lösningar för tågoperatörer, inklusive bemanning,
+                  utbildning och driftstöd.
                 </p>
               </div>
             </div>
@@ -130,7 +131,8 @@ export default function TjansterPage() {
                   Akut Felsökning och Reparation
                 </h3>
                 <p className={styles.cardDescription}>
-                  Snabb insats vid akuta problem för att minimera driftstopp och omfattande diagnostisering och reparation direkt på plats.
+                  Snabb insats vid akuta problem för att minimera driftstopp och
+                  omfattande diagnostisering och reparation direkt på plats.
                 </p>
               </div>
             </div>

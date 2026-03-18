@@ -23,16 +23,12 @@ export function HeroSection({
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <h2 className={styles.title}>
-          {title}
-        </h2>
-        <p className={styles.subtitle}>
-          {subtitle}
-        </p>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.subtitle}>{subtitle}</p>
         {showButton && (
           <Button
             size="lg"
-            className="bg-white text-blue-800 hover:bg-white/90 px-8 py-6 text-base font-semibold rounded-full"
+            className="rounded-full bg-white px-8 py-6 text-base font-semibold text-blue-800 hover:bg-white/90"
             asChild
           >
             <a href={buttonLink}>{buttonText}</a>

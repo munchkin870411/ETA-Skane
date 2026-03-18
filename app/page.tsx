@@ -12,16 +12,15 @@ export default function Home() {
       {/* Om Oss Section */}
       <section className={styles.omOssSection}>
         <div className={styles.container}>
-          
           <div className={styles.tjansterHeader}>
             <div>
               <h3 className={styles.omOssTitle}>
                 Vår unika historia och passion
               </h3>
             </div>
-            <Button 
+            <Button
               size="lg"
-              className="bg-blue-900 text-white hover:bg-blue-700 px-8 py-6 text-base font-semibold rounded-full"
+              className="rounded-full bg-blue-900 px-8 py-6 text-base font-semibold text-white hover:bg-blue-700"
               asChild
             >
               <a href="/om">LÄS MER</a>
@@ -41,21 +40,23 @@ export default function Home() {
 
             {/* Text content */}
             <div className={styles.textContent}>
-              <h4>
-                Vårt engagemang för hög kvalitet
-              </h4>
+              <h4>Vårt engagemang för hög kvalitet</h4>
               <p>
-                Elite Train Associates Skåne AB är en ledande aktör inom tågbranschen, baserad i Skåne, Sverige. Vår strävan efter säkerhet, kvalitet och innovation driver oss att leverera exceptionella tjänster inom tågunderhåll, service och operatörstjänster.
+                Elite Train Associates Skåne AB är en ledande aktör inom
+                tågbranschen, baserad i Skåne, Sverige. Vår strävan efter
+                säkerhet, kvalitet och innovation driver oss att leverera
+                exceptionella tjänster inom tågunderhåll, service och
+                operatörstjänster.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-    {/* Image Section with Parallax */}
-      <section 
+      {/* Image Section with Parallax */}
+      <section
         className={styles.parallaxSection}
-        style={{ backgroundImage: 'url(/pro-Eg9rHyUy-1.jpeg)' }}
+        style={{ backgroundImage: "url(/pro-Eg9rHyUy-1.jpeg)" }}
       >
         <div className={styles.parallaxOverlay} />
       </section>
@@ -65,13 +66,11 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.tjansterHeader}>
             <div>
-              <h3 className={styles.tjansterTitle}>
-                Våra huvudtjänster
-              </h3>
+              <h3 className={styles.tjansterTitle}>Våra huvudtjänster</h3>
             </div>
-            <Button 
+            <Button
               size="lg"
-              className="bg-blue-900 text-white hover:bg-blue-700 px-8 py-6 text-base font-semibold rounded-full"
+              className="rounded-full bg-blue-900 px-8 py-6 text-base font-semibold text-white hover:bg-blue-700"
               asChild
             >
               <a href="/tjanster">LÄS MER</a>
@@ -81,11 +80,8 @@ export default function Home() {
           <div className={styles.tjansterGrid}>
             {/* Tjänst 1 */}
             <a href="/tjanster" className={styles.tjanstCard}>
-              <div className={styles.spacer}>
-              </div>
-              <h4>
-                Tågunderhåll
-              </h4>
+              <div className={styles.spacer}></div>
+              <h4>Tågunderhåll</h4>
               <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-q1n3xa89-768x1024.jpeg"
@@ -98,11 +94,8 @@ export default function Home() {
 
             {/* Tjänst 2 */}
             <a href="/tjanster" className={styles.tjanstCard}>
-              <div className={styles.spacer}>
-              </div>
-              <h4>
-                Akut felsökning och reparation
-              </h4>
+              <div className={styles.spacer}></div>
+              <h4>Akut felsökning och reparation</h4>
               <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-tA4FKtiR-1024x768.jpeg"
@@ -115,11 +108,8 @@ export default function Home() {
 
             {/* Tjänst 3 */}
             <a href="/tjanster" className={styles.tjanstCard}>
-              <div className={styles.spacer}>
-              </div>
-              <h4>
-                Teknisk rådgivning
-              </h4>
+              <div className={styles.spacer}></div>
+              <h4>Teknisk rådgivning</h4>
               <div className={styles.tjanstImageWrapper}>
                 <Image
                   src="/pro-RTaibBoU_square-1024x1024.jpg"

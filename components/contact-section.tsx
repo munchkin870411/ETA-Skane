@@ -13,17 +13,16 @@ export function ContactSection() {
         className="object-cover"
       />
       <div className={styles.overlay} />
-      
+
       <div className={styles.container}>
-        <h3 className={styles.heading}>
-          Ta nästa steg tillsammans med oss
-        </h3>
+        <h3 className={styles.heading}>Ta nästa steg tillsammans med oss</h3>
         <p className={styles.description}>
-          Kontakta oss idag för att uppleva skillnaden med Elite Train Associates Skåne AB.
+          Kontakta oss idag för att uppleva skillnaden med Elite Train
+          Associates Skåne AB.
         </p>
-        <Button 
+        <Button
           size="lg"
-          className="bg-white text-blue-600 hover:bg-white/90 px-10 py-7 text-base font-semibold rounded-full"
+          className="rounded-full bg-white px-10 py-7 text-base font-semibold text-blue-600 hover:bg-white/90"
           asChild
         >
           <a href="/kontakt">KONTAKTA OSS</a>
